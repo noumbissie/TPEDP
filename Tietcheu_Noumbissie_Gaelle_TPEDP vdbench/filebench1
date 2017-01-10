@@ -1,0 +1,16 @@
+
+*SD:	Storage Definition
+*WD:	Workload Definition
+*RD:	Run Definition
+
+sd=sd1,lun=/home/noumbissie/Bureau/EDP/file.dat,size=3G
+wd=wd1,sd=sd1,xfersize=4KB,rdpct=100,seekpct=0
+wd=wd2,sd=sd1,xfersize=4KB,rdpct=67,whpct=33,seekpct=0
+wd=wd3,sd=sd1,xfersize=4KB,rdpct=50,whpct=50,seekpct=0
+wd=wd4,sd=sd1,xfersize=4KB,rdpct=33,whpct=67,seekpct=0
+wd=wd5,sd=sd1,xfersize=4KB,rdpct=0,whpct=100,seekpct=0
+rd=run1,wd=wd1,iorate=100,elapsed=10,interval=2
+rd=run2,wd=wd2,iorate=100,elapsed=10,interval=2
+rd=run3,wd=wd3,iorate=100,elapsed=10,interval=2
+rd=run4,wd=wd4,iorate=100,elapsed=10,interval=2
+rd=run5,wd=wd5,iorate=100,elapsed=10,interval=2
